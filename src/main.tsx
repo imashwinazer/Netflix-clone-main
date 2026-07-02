@@ -6,6 +6,7 @@ import ReactDOM from "react-dom/client";
 import { Provider } from "react-redux";
 import { RouterProvider } from "react-router-dom";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { Analytics } from "@vercel/analytics/react";
 
 import store from "./store";
 import { extendedApi } from "./store/slices/configuration";
@@ -26,6 +27,7 @@ root.render(
           router={router}
           fallbackElement={<MainLoadingScreen />}
         />
+        <Analytics />
       </ThemeProvider>
     </React.StrictMode>
   </Provider>
